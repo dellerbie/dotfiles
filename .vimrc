@@ -1,3 +1,4 @@
+" Pathogen: ag.vim, ctrlp.vim
 execute pathogen#infect()
 
 set nocompatible
