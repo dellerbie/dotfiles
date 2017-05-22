@@ -1,4 +1,4 @@
-export DEV=$HOME/Development
+export DEV=$HOME/src
 export S=$DEV/sandbox
 
 # Load .bashrc if it exists
