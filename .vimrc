@@ -51,12 +51,16 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-map <Leader>s :Ag 
+map <Leader>s :grep 
 
 " Mappings
+nmap 0 ^
 nmap <leader>ew :e <C-R>=expand('%:h').'/'<cr>
 nmap <leader>es :sp <C-R>=expand('%:h').'/'<cr>
 nmap <leader>ev :vsp <C-R>=expand('%:h').'/'<cr>
+nmap <leader>ns :nohlsearch<cr>
+nmap <leader>so :source $MYVIMRC<cr>
+nmap <leader>vr :sp $MYVIMRC<cr>
 
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
