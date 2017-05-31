@@ -1,6 +1,8 @@
 " Pathogen: ag.vim, ctrlp.vim, vim-javascript
 execute pathogen#infect()
 
+" Enable the matchit plugin
+packadd! matchit
 set nocompatible
 filetype plugin on
 set encoding=utf-8
