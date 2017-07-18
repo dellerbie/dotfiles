@@ -2,10 +2,12 @@
 execute pathogen#infect()
 
 " Enable the matchit plugin
-packadd! matchit
+runtime macros/matchit.vim
 set nocompatible
 filetype plugin on
 set encoding=utf-8
+syntax enable
+colorscheme gruvbox
 
 set number
 
@@ -13,6 +15,9 @@ let mapleader=" "
 
 " JSX syntax highlighting for .js files
 let g:jsx_ext_required = 0
+
+" Ruby syntax checker
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
 " Always display the status line
 set laststatus=2
