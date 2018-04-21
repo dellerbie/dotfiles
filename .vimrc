@@ -1,4 +1,5 @@
-" Pathogen: ag.vim, ctrlp.vim, vim-javascript
+" Pathogen: gruvbox, vim-colors-solarized, matchit, vim-go
+" vim-surround, ctrlp.vim, vim-javascript
 execute pathogen#infect()
 
 " Enable the matchit plugin
@@ -8,6 +9,9 @@ filetype plugin on
 set encoding=utf-8
 syntax enable
 colorscheme gruvbox
+set background=dark
+" Store swap files in .vim/tmp
+set directory^=$HOME/.vim/tmp//
 
 set number
 
@@ -18,6 +22,8 @@ let g:jsx_ext_required = 0
 
 " Ruby syntax checker
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Always display the status line
 set laststatus=2
