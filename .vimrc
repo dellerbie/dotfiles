@@ -55,7 +55,7 @@ set colorcolumn=+1
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher if executable('ag') " Use Ag over Grep
 if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ackprg='ag --vimgrep'
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
@@ -74,6 +74,7 @@ nmap <leader>ev :vsp <C-R>=expand('%:h').'/'<cr>
 nmap <leader>ns :nohlsearch<cr>
 nmap <leader>so :source $MYVIMRC<cr>
 nmap <leader>vr :sp $MYVIMRC<cr>
+nmap <leader>c :close<cr>
 
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
