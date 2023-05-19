@@ -1,13 +1,20 @@
-" Pathogen: gruvbox, vim-colors-solarized, matchit, vim-go
-" vim-surround, ctrlp.vim, vim-javascript
+" Install Pathogen and these plugins: gruvbox, matchit, vim-surround, ctrlp.vim
+"   - https://github.com/tpope/vim-pathogen
+"   - https://github.com/morhetz/gruvbox/wiki/Installation
+"   - Fira Mono Font: https://mozilla.github.io/Fira/
+"   - https://github.com/adelarsq/vim-matchit
+"   - https://github.com/tpope/vim-surround
+"   - https://github.com/ctrlpvim/ctrlp.vim
+" Install the program 'ag' for searching, with `brew install ag`
 execute pathogen#infect()
 
 " Enable the matchit plugin
-runtime macros/matchit.vim
+:packadd! matchit
+
 set nocompatible
-filetype plugin on
+filetype plugin indent on
 set encoding=utf-8
-syntax enable
+syntax on
 colorscheme gruvbox
 set background=dark
 " Store swap files in .vim/tmp
@@ -16,12 +23,6 @@ set directory^=$HOME/.vim/tmp//
 set number
 
 let mapleader=" "
-
-" JSX syntax highlighting for .js files
-let g:jsx_ext_required = 0
-
-" Ruby syntax checker
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
